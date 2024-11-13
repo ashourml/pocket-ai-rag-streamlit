@@ -14,11 +14,15 @@ def read_files():
     paths = [os.path.join('pdf', i ) for i in files]
     return paths
 
-if os.path.exists('pdf'):
-    pass
-else :
-    os.mkdir('pdf')
+def path_creator():
+    if os.path.exists('pdf') and os.path.exists('chats'):
+        pass
+    else :
+        os.mkdir('pdf')
+        os.mkdir('chats')
 
+
+path_creator()
 
 # RAG init
 # rag = RAG()
